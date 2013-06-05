@@ -9,6 +9,8 @@ sections: [
     ['post', 'Posts']
 ]
 
+baseurl: '/jekyll-docs-template/'
+
 pygments: true
 future: false
 
