@@ -9,6 +9,8 @@ sections: [
     ['post', 'Posts']
 ]
 
+permalink: none
+
 pygments: true
 future: false
 
