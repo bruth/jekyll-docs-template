@@ -11,6 +11,8 @@ sections: [
 
 baseurl: '/jekyll-docs-template/'
 
+permalink: none
+
 pygments: true
 future: false
 
