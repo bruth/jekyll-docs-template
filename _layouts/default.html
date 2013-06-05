@@ -7,9 +7,9 @@
 
         <title>{{ page.title }}</title>
 
-        <link rel="stylesheet" href="./css/syntax.css">
-        <link rel="stylesheet" href="./css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="{{ site.baseurl }}css/syntax.css">
+        <link rel="stylesheet" href="{{ site.baseurl }}css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ site.baseurl }}css/main.css">
     </head>
     <body>
 
@@ -17,7 +17,7 @@
             <div class=row-fluid>
                 <div class=span12>
                     <header class=page-header>
-                    <h2><a href="{% if site.url %}{{ site.url }}{% else %}/{% endif %}">{{ site.title }}</a>
+                    <h2><a href="{{ site.baseurl }}">{{ site.title }}</a>
                         {% if site.subtitle %}<small>{{ site.subtitle }}</small>{% endif %}</h2>
                     </header>
                 </div>
