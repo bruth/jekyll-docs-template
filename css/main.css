@@ -1,0 +1,27 @@
+body {
+    font-weight: 300;
+}
+
+pre, code {
+    border: none;
+    background-color: #f9f9f9;
+    text-shadow: 0 1px 1px #fff;
+}
+
+code {
+    color: inherit;
+}
+
+#navigation {
+    font-size: 0.9em;
+}
+
+#navigation li a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#navigation .nav-header {
+    padding-left: 0;
+    padding-right: 0;
+}
