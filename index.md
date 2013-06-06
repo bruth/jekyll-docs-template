@@ -19,4 +19,4 @@ Start by [creating a new post](http://jekyllrb.com/docs/posts/) one of the categ
 ruby bin/jekyll-page "Some Page Title" ref
 ```
 
-Read more [Usage]({{ site.baseurl }}{% post_url 2013-06-06-usage %}) page for more details.
+Read more [Usage]({{ site.baseurl }}{% post_url 2013-06-06-usage %}) page for more details or view the project [on GitHub](https://github.com/bruth/jekyll-docs-template/)
