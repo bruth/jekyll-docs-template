@@ -21,8 +21,8 @@ permalink: none
 # Syntax highlighting
 pygments: true
 
-# Do not publish future pages/posts
-future: false
+# Since these are pages, it doesn't really matter
+future: true
 
 # Exclude non-site files
 exclude: ['bin', 'README.md']
