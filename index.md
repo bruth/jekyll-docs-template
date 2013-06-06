@@ -3,32 +3,16 @@ layout: default
 title: "Jekyll Docs Template"
 ---
 
-<p class=lead>The jekyll-docs-template provides a minimal template for writing
-documentation-based sites for projects.</p>
+### Get Started
 
-The primary feature is making use of the post `category` defined in the
-post's Front Matter header. The navigation is built based on the sections
-listed in the `_config.yml`.
+Start by [creating a new post](http://jekyllrb.com/docs/posts/) one of the categories listed in `_config.yml`. It will appear in the navigation on the left once recompiled. Or use the supplied script to make creating pages easier:
 
-```yaml
-sections: [
-    ['doc', 'Documentation'],
-    ['tut', 'Tutorial'],
-    ['ref', 'Reference'],
-    ['dev', 'Developers'],
-    ['post', 'Posts']
-]
+```bash
+ruby bin/jekyll-page "Some Page Title" ref
 ```
 
-Create a new post/page the same way, just specify the category and it will
-show up in the navigation.
+#### Don't Forget
 
-```html
----
-layout: page
-title: New Reference Page
-category: ref
----
-
-...
-```
+- Add your own content to this page (i.e. `index.md`) and change the `title`
+- Change `title` and `subtitle` defined in `config.yml` for your site
+- Set the `baseurl` in `_config.yml` for your repo if deploying to GitHub pages

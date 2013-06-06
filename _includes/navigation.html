@@ -1,8 +1,8 @@
-<ul id=navigation class="nav nav-list">
+<ul class="nav nav-list">
 {% for section in site.sections %}
     {% assign attr = section[0] %}
-    {% for page in site.categories[attr] %}
-        {% if forloop.first and forloop.length == 1 %}
+    {% for page in site.categories.[attr] %}
+        {% if forloop.first %}
             <li class=nav-header>{{ section[1] }}</li>
         {% endif %}
         <li><a href="{% if site.baseurl %}{{ site.baseurl }}{{ page.url|remove_first:'/' }}{% else %}{{ page.url }}{% endif %}">{{ page.title }}</a></li>

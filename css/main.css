@@ -4,6 +4,7 @@ body {
 
 pre, code {
     border: none;
+    border-radius: 0;
     background-color: #f9f9f9;
     text-shadow: 0 1px 1px #fff;
 }
@@ -11,6 +12,24 @@ pre, code {
 code {
     color: inherit;
 }
+
+#header {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+#header a:hover {
+    text-decoration: none;
+}
+
+#content > .page-header:first-child {
+    margin-top: 0;
+}
+
+#content > .page-header:first-child h2 {
+    margin-top: 0;
+}
+
 
 #navigation {
     font-size: 0.9em;

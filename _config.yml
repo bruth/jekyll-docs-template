@@ -12,9 +12,9 @@ sections: [
 baseurl: '/jekyll-docs-template/'
 
 permalink: none
-
 pygments: true
 future: false
+exclude: ['bin', 'README.md']
 
 markdown: redcarpet
 redcarpet:
