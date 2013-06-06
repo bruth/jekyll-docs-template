@@ -5,7 +5,7 @@
         {% if forloop.first %}
             <li class=nav-header>{{ section[1] }}</li>
         {% endif %}
-        <li><a href="{% if site.baseurl %}{{ site.baseurl }}{{ page.url|remove_first:'/' }}{% else %}{{ page.url }}{% endif %}">{{ page.title }}</a></li>
+        <li><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
     {% endfor %}
 {% endfor %}
 <!-- List additional links. It is recommended to add a divider
