@@ -35,8 +35,10 @@ now=DateTime.now().strftime('%F %T')
 
 filepath = "_posts/#{today}-#{filename}.md"
 
-puts filename
-puts filepath
+if File.exists?(filepath)
+    puts "File #{filepath} already exists"
+    exit
+end
 
 content = <<END
 ---
