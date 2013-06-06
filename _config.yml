@@ -1,6 +1,8 @@
-# jekyll-docs-template specific variables
-title: 'Jekyll Docs Template'
-subtitle: 'Painless documentation using Jekyll'
+# Site title and subtitle. This is used in _includes/header.html
+title: 'jekyll-docs-template'
+subtitle: 'Painless documentation for your projects'
+
+# Default categories (in order) to appear in the navigation
 sections: [
     ['doc', 'Documentation'],
     ['tut', 'Tutorial'],
@@ -9,11 +11,23 @@ sections: [
     ['post', 'Posts']
 ]
 
+# Keep as an empty string if served up at the root. If served up at a specific
+# path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
+baseurl: ''
+
+# Dates are not included in permalinks
 permalink: none
+
+# Syntax highlighting
 pygments: true
+
+# Do not publish future pages/posts
 future: false
+
+# Exclude non-site files
 exclude: ['bin', 'README.md']
 
+# Use the redcarpet Markdown renderer
 markdown: redcarpet
 redcarpet:
     extensions: [
