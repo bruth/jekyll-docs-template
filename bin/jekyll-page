@@ -1,0 +1,64 @@
+#!/usr/bin/env ruby
+
+require 'date'
+require 'optparse'
+
+options = {}
+
+parser = OptionParser.new do |opt|
+    opt.banner = 'usage: jekyll-page TITLE CATEGORY [FILENAME] [OPTIONS]'
+    opt.separator ''
+    opt.separator 'Options'
+    opt.on('-e', '--edit', 'Edit the page') do |edit|
+        options[:edit] = true
+    end
+    opt.separator ''
+end
+
+parser.parse!
+
+title = ARGV[0]
+category = ARGV[1]
+filename = ARGV[2]
+
+if not title or not category
+    puts parser
+    exit
+end
+
+if not filename
+    filename = title.downcase.gsub(/[^a-z0-9\s]/, '').gsub(/\s+/, '-')
+end
+
+today=Date.today().strftime('%F')
+now=DateTime.now().strftime('%F %T')
+
+filepath = "_posts/#{today}-#{filename}.md"
+
+puts filename
+puts filepath
+
+content = <<END
+---
+layout: page
+title: \"#{title}\"
+category: #{category}
+date: #{now}
+---
+
+
+END
+
+File.open(filepath, 'w') do |file|
+    file.puts content
+end
+
+
+if options[:edit]
+    if not ENV['EDITOR']
+        puts 'No $EDITOR variable set'
+        exit
+    end
+    puts ENV['EDITOR']
+    exec("#{ENV['EDITOR']} #{filepath}")
+end

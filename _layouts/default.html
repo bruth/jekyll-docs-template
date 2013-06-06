@@ -7,28 +7,25 @@
 
         <title>{{ page.title }}</title>
 
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{{ site.baseurl }}css/syntax.css">
-        <link rel="stylesheet" href="{{ site.baseurl }}css/bootstrap.min.css">
         <link rel="stylesheet" href="{{ site.baseurl }}css/main.css">
     </head>
     <body>
 
         <div class="container">
             <div class=row-fluid>
-                <div class=span12>
-                    <header class=page-header>
-                    <h2><a href="{{ site.baseurl }}">{{ site.title }}</a>
-                        {% if site.subtitle %}<small>{{ site.subtitle }}</small>{% endif %}</h2>
-                    </header>
+                <div id=header class=span12>
+                    {% include header.html %}
                 </div>
             </div>
 
             <div class=row-fluid>
-                <div class=span2>
+                <div id=navigation class=span2>
                     {% include navigation.html %}
                 </div>
 
-                <div class=span10>
+                <div id=content class=span10>
                     {{ content }}
                 </div>
           </div>
