@@ -1,12 +1,17 @@
 body {
-    font-weight: 300;
+    font-weight: 400;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
 }
 
 pre, code {
     border: none;
     border-radius: 0;
     background-color: #f9f9f9;
-    text-shadow: 0 1px 1px #fff;
+    font-size: 0.8em;
+}
+
+pre {
+    font-size: 1em;
 }
 
 code {
