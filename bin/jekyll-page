@@ -3,6 +3,9 @@
 require 'date'
 require 'optparse'
 
+POSTS_DIR = '_posts'
+PAGES_DIR = '_pages'
+
 options = {}
 
 parser = OptionParser.new do |opt|
@@ -11,6 +14,9 @@ parser = OptionParser.new do |opt|
     opt.separator 'Options'
     opt.on('-e', '--edit', 'Edit the page') do |edit|
         options[:edit] = true
+    end
+    opt.on('-l', '--link', 'Relink pages') do |link|
+        options[:link] = true
     end
     opt.separator ''
 end
@@ -21,8 +27,29 @@ title = ARGV[0]
 category = ARGV[1]
 filename = ARGV[2]
 
+# Create _pages directory if it doesn't exist
+if not Dir.exists?(PAGES_DIR)
+    Dir.mkdir(PAGES_DIR)
+end
+
+if options[:link]
+    Dir.foreach(POSTS_DIR) do |name|
+        next if name[0] == '.'
+        nodate = name[/\d{4}-\d{2}-\d{2}-(?<rest>.*)/, 'rest']
+        if File.symlink?("#{PAGES_DIR}/#{nodate}")
+            File.delete("#{PAGES_DIR}/#{nodate}")
+        end
+        abspath = File.absolute_path("#{POSTS_DIR}/#{name}")
+        File.symlink(abspath, "#{PAGES_DIR}/#{nodate}")
+    end
+end
+
 if not title or not category
-    puts parser
+    # This flag can be used by itself, exit silently if no arguments
+    # are defined
+    if not options[:link]
+        puts parser
+    end
     exit
 end
 
@@ -33,7 +60,8 @@ end
 today=Date.today().strftime('%F')
 now=DateTime.now().strftime('%F %T')
 
-filepath = "_posts/#{today}-#{filename}.md"
+filepath = "#{POSTS_DIR}/#{today}-#{filename}.md"
+symlink = "#{PAGES_DIR}/#{filename}.md"
 
 if File.exists?(filepath)
     puts "File #{filepath} already exists"
@@ -55,6 +83,7 @@ File.open(filepath, 'w') do |file|
     file.puts content
 end
 
+File.symlink(File.absolute_path(filepath), symlink)
 
 if options[:edit]
     if not ENV['EDITOR']
@@ -62,5 +91,5 @@ if options[:edit]
         exit
     end
     puts ENV['EDITOR']
-    exec("#{ENV['EDITOR']} #{filepath}")
+    exec("#{ENV['EDITOR']} #{filename}")
 end
