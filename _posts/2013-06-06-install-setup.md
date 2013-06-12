@@ -3,6 +3,7 @@ layout: page
 title: "Install & Setup"
 category: doc
 date: 2013-06-06 11:01:37
+order: 0
 ---
 
 #### Install

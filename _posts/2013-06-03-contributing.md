@@ -3,6 +3,7 @@ layout: page
 title:  Contributing
 date:   2013-06-03 21:12:57
 category: dev
+order: 0
 ---
 
 The first step in contributing to the code base is [forking the repo](https://help.github.com/articles/fork-a-repo).
