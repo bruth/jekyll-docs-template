@@ -2,6 +2,9 @@
 title: 'jekyll-docs-template'
 subtitle: 'Painless documentation for your projects'
 
+# URL to source code, used in _includes/footer.html
+codeurl: 'https://github.com/bruth/jekyll-docs-template'
+
 # Default categories (in order) to appear in the navigation
 sections: [
     ['doc', 'Documentation'],
