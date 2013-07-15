@@ -21,13 +21,20 @@
             </div>
 
             <div class=row-fluid>
-                <div id=navigation class=span2>
-                    {% include navigation.html %}
-                </div>
+                {% assign post_count = site.posts|size %}
+                {% if site.navigation != 0 and site.navigation == 1 or post_count > 0 %}
+                    <div id=navigation class=span2>
+                        {% include navigation.html %}
+                    </div>
 
-                <div id=content class=span10>
-                    {{ content }}
-                </div>
+                    <div id=content class=span10>
+                        {{ content }}
+                    </div>
+                {% else %}
+                    <div id=content class=span12>
+                        {{ content }}
+                    </div>
+                {% endif %}
             </div>
 
             <div class=row-fluid>
@@ -48,6 +55,8 @@
 
                 var navUl = document.querySelectorAll('#navigation ul')[0],
                     navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
 
                 for (var i = 0; i < navLis.length; i++) {
                     var order, li = navLis[i];
