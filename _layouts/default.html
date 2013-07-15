@@ -45,7 +45,7 @@
         </div>
 
         <script>
-            if (document.querySelectorAll) {
+            function orderNav() {
                 var list,
                     section,
                     header,
@@ -88,6 +88,8 @@
                     }
                 }
             }
+
+            if (document.querySelectorAll) orderNav();
         </script>
     </body>
 </html>
