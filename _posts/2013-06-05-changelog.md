@@ -5,6 +5,12 @@ category: dev
 order: 1
 ---
 
+#### 2013-07-15
+
+- Add support hiding the navigation for single-page sites
+    - If no posts have been created, the navigation will be hidden
+    - There is an option to explicitly show or hide the navigation
+
 #### 2013-07-12
 
 - Add support for the `codeurl` site variable (defined in `_config.yml`) for linking back to the source code in the footer
