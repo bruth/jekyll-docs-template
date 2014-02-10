@@ -63,7 +63,7 @@
                     var order, li = navLis[i];
 
                     if (li.classList.contains('nav-header')) {
-                        section = li.innerText;
+                        section = li.textContent || li.innerText;
                         sections.push(section);
                         headers[section] = li;
                         continue;
