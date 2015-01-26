@@ -38,6 +38,21 @@
                 {% endif %}
             </div>
 
+            {% if page.disqus == 1 %}
+            <div class=row-fluid>
+              {% if site.navigation == 1 or post_count > 0 %}
+                <div id=navigation class=span2></div>
+                <div id=disqus class=span10>
+                    {% include disqus.html %}
+                </div>
+              {% else %}
+                <div id=disqus class=span12>
+                    {% include disqus.html %}
+                </div>
+              {% endif %}
+            </div>
+            {% endif %}
+
             <div class=row-fluid>
                 <div id=footer class=span12>
                     {% include footer.html %}
