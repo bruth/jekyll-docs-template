@@ -2,6 +2,9 @@
 title: 'jekyll-docs-template'
 subtitle: 'Painless documentation for your projects'
 
+# if you wish to integrate disqus on pages set your shortname here
+disqus_shortname: ''
+
 # Enable/show navigation. There are there options:
 #   0 - always hide
 #   1 - always show
