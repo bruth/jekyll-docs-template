@@ -109,5 +109,8 @@
 
             if (document.querySelectorAll) orderNav();
         </script>
+        {% if site.google_analytics_id != "" %}
+        {% include google_analytics.html %}
+        {% endif %}
     </body>
 </html>
