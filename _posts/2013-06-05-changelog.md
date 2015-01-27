@@ -5,6 +5,10 @@ category: dev
 order: 1
 ---
 
+#### 2015-01-27
+
+- Add Google Analytics support
+
 #### 2015-01-26
 
 - Add disqus support
