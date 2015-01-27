@@ -5,6 +5,10 @@ category: dev
 order: 1
 ---
 
+#### 2015-01-26
+
+- Add disqus support
+
 #### 2013-07-15
 
 - Add support hiding the navigation for single-page sites
