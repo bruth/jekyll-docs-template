@@ -2,6 +2,12 @@
 title: 'jekyll-docs-template'
 subtitle: 'Painless documentation for your projects'
 
+# if you wish to integrate disqus on pages set your shortname here
+disqus_shortname: ''
+
+# if you use google analytics, add your tracking id here
+google_analytics_id: ''
+
 # Enable/show navigation. There are there options:
 #   0 - always hide
 #   1 - always show
@@ -28,7 +34,7 @@ baseurl: '/jekyll-docs-template'
 permalink: none
 
 # Syntax highlighting
-pygments: true
+highlighter: pygments
 
 # Since these are pages, it doesn't really matter
 future: true
