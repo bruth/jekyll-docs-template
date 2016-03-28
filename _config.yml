@@ -34,7 +34,7 @@ baseurl: '/jekyll-docs-template'
 permalink: none
 
 # Syntax highlighting
-highlighter: pygments
+highlighter: rogue
 
 # Since these are pages, it doesn't really matter
 future: true
@@ -42,8 +42,8 @@ future: true
 # Exclude non-site files
 exclude: ['bin', 'README.md']
 
-# Use the redcarpet Markdown renderer
-markdown: redcarpet
+# Use the kramdown Markdown renderer
+markdown: kramdown
 redcarpet:
     extensions: [
         'no_intra_emphasis',
